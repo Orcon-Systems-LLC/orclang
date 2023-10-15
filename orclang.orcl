@@ -1,0 +1,2 @@
+var bad_boy = 'good';
+print(bad_boy);

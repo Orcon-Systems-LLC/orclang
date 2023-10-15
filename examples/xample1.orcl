@@ -1,0 +1,7 @@
+ function bonda(){
+    print("I dunno");
+}
+
+ var kawa = bonda();
+
+printf(kawa);
