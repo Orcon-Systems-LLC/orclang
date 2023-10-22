@@ -61,7 +61,7 @@ visitor_T* init_visitor()
 
 AST_T* visitor_visit(visitor_T* visitor, AST_T* node)
 {
-    switch (node->type)
+    switch (node->type)//the client type
     {
         case AST_VARIABLE_DEFINITION: return visitor_visit_variable_definition(visitor, node); break;
         case AST_FUNCTION_DEFINITION: return visitor_visit_function_definition(visitor, node); break;
