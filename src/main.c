@@ -1,4 +1,4 @@
-/*Copyright (c) Orcon Systems LLc,2023
+/*Copyright (c) Orcon Systems LLc,2024
  * All rights reserved.
  *
  * This source code is licensed under the LGPL license found in the
@@ -31,7 +31,8 @@
 */
 
 // Path: src/main.c
-// Created by afif on 10/16/2023
+// Created by afif on 3/20/2024
+
 #include <stdio.h>
 #include <string.h>
 #include "include/lexer.h"
@@ -42,35 +43,30 @@
 #define MAX_LIMIT 20
 void print_help()
 {
-    printf("Usage:\nhello.out <filename>\n");
+    printf("Usage:\norclang.out <filename>\n");
     exit(1);
 }
-
+// updated main for beddar file reading functionality
 int main(int argc, char* argv[])
 {
     if (argc >= 2){
         for(int i = 1; i < argc; i++){
             int len = strlen(argv[i]);
-            char* last_four = &argv[i][len-6];
-            if(strcmp(last_four,".orclg") == 0){
-                                lexer_T* lexer = init_lexer(
-                    get_file_contents(argv[i])
-                );
+            if (len >= 6 && strcmp(&argv[i][len-6], ".orclg") == 0) {
+                lexer_T* lexer = init_lexer(get_file_contents(argv[i]));
                 parser_T* parser = init_parser(lexer);
                 AST_T* root = parser_parse(parser, parser->scope);
                 visitor_T* visitor = init_visitor();
                 visitor_visit(visitor, root);
-            }
-
-            else {
+            } else {
+                printf("Error: Invalid file extension for '%s'. Please provide a '.orclg' file.\n", argv[i]);
                 print_help();
             }
         }
-    }
-    else {
+    } else {
         char input[MAX_LIMIT];
         while(1){
-            printf("Welcome to the orclang programming  language v. 0.0.1!\nCreated by Afif_sh\n>>> ");
+            printf("Welcome to the orclang programming language v. 0.0.1!\nCreated by Afif_sh\n>>> ");
             fgets(input,MAX_LIMIT, stdin);
             lexer_T* lexer = init_lexer(input);
             parser_T* parser = init_parser(lexer);
