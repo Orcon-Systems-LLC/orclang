@@ -66,7 +66,7 @@ int main(int argc, char* argv[])
     } else {
         char input[MAX_LIMIT];
         while(1){
-            printf("Welcome to the orclang programming language v. 0.0.1!\nCreated by Afif_sh\n>>> ");
+            printf("Welcome to the orclang programming language intrepeter v. 0.1.2!\n(c), copyright Afif Ali Saadman on behalf of Orcon Systems LLC\n>>> ");
             fgets(input,MAX_LIMIT, stdin);
             lexer_T* lexer = init_lexer(input);
             parser_T* parser = init_parser(lexer);
