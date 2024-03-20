@@ -1,0 +1,12 @@
+void dosomething()
+{
+    print("This is our function calling!");
+};
+
+dosomething();
+dosomething();
+dosomething();
+dosomething();
+dosomething();
+dosomething();
+dosomething();

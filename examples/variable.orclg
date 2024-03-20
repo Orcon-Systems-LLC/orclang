@@ -1,0 +1,4 @@
+var name = "Orclang";
+var othername = "OSL";
+
+print(name,othername);

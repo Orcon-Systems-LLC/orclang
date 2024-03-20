@@ -1,0 +1,3 @@
+var good = "hi";
+
+print(good);
