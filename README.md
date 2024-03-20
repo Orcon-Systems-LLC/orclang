@@ -1,5 +1,5 @@
 # Orclang
-[LOGO](readmeimages/profile.png)
+<img alt="LOGO" src="readmeimages/profile.png">
 
 Welcome to Orclang official github respiratory. Please read this readme in order to get no error during installation and using it.
 
