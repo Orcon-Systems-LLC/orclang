@@ -11,15 +11,23 @@ Welcome to Orclang official github respiratory. Please read this readme in order
 
 ## Installation
 Download the latest version of orclang at the [release](https://github.com/Orcon-Systems-LLC/orclang/releases) section of github and download the latest version.
-**NOTE: ONLY FOR LINUX . FOR WINDOWS , USE WSL **
-** REQUIREMENTS: GCC INSTALLED**
+**NOTE: ONLY FOR LINUX AND WINDOWS. **
+** REQUIREMENTS: GCC INSTALLED FOR LINUX**
 After that, unzip the file and run the ```installer.sh ``` file.
 BOOM! You've successfully installed orclang.
+
+And for windows, Download the installer
 
 ## Quickstart
 So , to run a orclang program, just type 
 ```
 ./orclang.out <folder_name>/<filename>.orclg
+
+```
+
+And for Windows
+```
+orclang.exe <folder_name>/<filename>.orclg
 
 ```
 
